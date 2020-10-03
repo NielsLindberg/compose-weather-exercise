@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">compose-weather-exercise</string>
+    <string name="places_title">Forecast</string>
+    <string name="places_error_subtitle">An error occured while trying to fetch the places.</string>
+    <string name="forecast_error_subtitle">An error occured while trying to fetch the forecast.</string>
+    <string name="error_retry">Retry</string>
+    <string name="weather_image_description">Image icon showing the weather type</string>
+</resources>
