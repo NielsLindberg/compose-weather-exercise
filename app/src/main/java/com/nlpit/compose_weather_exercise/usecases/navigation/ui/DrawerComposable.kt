@@ -8,9 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.nlpit.compose_weather_exercise.usecases.DI
-import com.nlpit.compose_weather_exercise.usecases.navigation.actions.NavigateActions
 import com.nlpit.compose_weather_exercise.usecases.navigation.state.ScreenState
-import com.nlpit.compose_weather_exercise.usecases.places.actions.FetchLocationsAction
 
 @Composable
 fun DrawerComposable(closeDrawer: () -> Unit, state: ScreenState, modifier: Modifier = Modifier) {

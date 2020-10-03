@@ -14,7 +14,6 @@ import retrofit2.Response
 class FetchLocationsUnsuccessful(errorMessage: String) : ErrorActions(errorMessage)
 class FetchLocationsSuccessful(val places: List<Place>) : Action(places)
 
-
 class FetchLocationsAction : AsyncAction(
     asyncFun = suspend {
         val ids = DI.woeIds.joinToString(separator = ",")
