@@ -7,17 +7,17 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-
+//TODO 2: Create Color Palette
 private val LightColorPalette = lightColors(
-    primary = deepOrange,
-    primaryVariant = deepOrangeDark,
-    secondary = brown,
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.Black,
-    onSecondary = whiteIsh,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
+//    primary = deepOrange,
+//    primaryVariant = ,
+//    secondary = ,
+//    background = ,
+//    surface = ,
+//    onPrimary = ,
+//    onSecondary = ,
+//    onBackground = ,
+//    onSurface = ,
 )
 
 @Composable
@@ -25,16 +25,10 @@ fun ComposeweatherexerciseTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable() () -> Unit
 ) {
-    val colors = if (darkTheme) {
-        LightColorPalette //DarkColorPalette
-    } else {
-        LightColorPalette
-    }
 
     MaterialTheme(
-        colors = colors,
+        content = content,
+        colors = LightColorPalette,
         typography = typography,
-        shapes = shapes,
-        content = content
-    )
+        shapes = shapes)
 }

@@ -2,6 +2,10 @@ package com.nlpit.compose_weather_exercise.theme
 
 import androidx.compose.ui.graphics.Color
 
+// TODO: 1 Create colors to use in color palette for example:
+// Check https://material.io/resources/color/#!/
+// If a color is #f45118 -> Color(0xFFf45118)
+
 val deepOrange = Color(0xFFf45118)
 val deepOrangeDark = Color(0xFFb91400)
 val brown = Color(0xFF4e342e)
