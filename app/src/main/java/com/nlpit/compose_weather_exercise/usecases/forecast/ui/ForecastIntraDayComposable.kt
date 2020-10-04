@@ -1,7 +1,5 @@
 package com.nlpit.compose_weather_exercise.usecases.forecast.ui
 
-import androidx.compose.foundation.Box
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.ScrollableRow
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.*
@@ -13,7 +11,6 @@ import androidx.compose.ui.unit.dp
 import com.nlpit.compose_weather_exercise.usecases.forecast.entities.ForecastDaily
 import com.nlpit.compose_weather_exercise.utils.ui.dayOfWeek
 import com.nlpit.compose_weather_exercise.utils.ui.hourMinute
-import com.nlpit.compose_weather_exercise.utils.ui.longDate
 import dev.chrisbanes.accompanist.coil.CoilImage
 
 @Composable
