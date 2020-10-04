@@ -6,6 +6,7 @@ import com.nlpit.compose_weather_exercise.framework.redux.Action
 import com.nlpit.compose_weather_exercise.framework.redux.middlewares.async.AsyncMiddleware
 import com.nlpit.compose_weather_exercise.framework.redux.middlewares.logger.LoggerMiddleware
 import com.nlpit.compose_weather_exercise.usecases.error_handling.state.ErrorState
+import com.nlpit.compose_weather_exercise.usecases.forecast.state.ForecastState
 import com.nlpit.compose_weather_exercise.usecases.navigation.state.ScreenState
 import com.nlpit.compose_weather_exercise.usecases.places.state.PlacesState
 
@@ -15,6 +16,7 @@ object DI {
         initialState = GlobalState(
             errorState = ErrorState("init"),
             placesState = PlacesState(),
+            forecastState = ForecastState(),
             screenState = ScreenState()
         ),
         reducer = GlobalStateReducer,

@@ -13,7 +13,7 @@ import com.nlpit.compose_weather_exercise.usecases.navigation.state.ScreenState
 @Composable
 fun DrawerComposable(closeDrawer: () -> Unit, state: ScreenState, modifier: Modifier = Modifier) {
     Column(modifier.fillMaxSize().padding(start = 24.dp, top = 48.dp)) {
-        state.screens.forEach {
+        state.drawer.forEach {
             Spacer(Modifier.preferredHeight(24.dp))
             Text(
                 modifier = Modifier.clickable(onClick = {

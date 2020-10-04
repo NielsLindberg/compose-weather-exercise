@@ -8,7 +8,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-class DefaultStore<AppState: State>(
+class DefaultStore<AppState : State>(
     initialState: AppState,
     private val reducer: Reducer<AppState>,
     private val middleware: List<Middleware<AppState>>
@@ -20,6 +20,7 @@ class DefaultStore<AppState: State>(
         launch {
             val newAction = applyMiddleware(state.value, action)
             state.value = reducer(state.value, newAction)
+
         }
     }
 
@@ -32,7 +33,7 @@ class DefaultStore<AppState: State>(
             // Last link of the chain. It just returns the action as is.
             return { _, action, _ -> action }
         }
-        return { state, action, dispatch  ->
+        return { state, action, dispatch ->
             middleware[index].invoke(
                 state,
                 action,

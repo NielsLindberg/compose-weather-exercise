@@ -1,21 +1,20 @@
 package com.nlpit.compose_weather_exercise.usecases
 
-import androidx.compose.foundation.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import com.nlpit.compose_weather_exercise.theme.ComposeweatherexerciseTheme
-import com.nlpit.compose_weather_exercise.usecases.navigation.entities.Screen
+import com.nlpit.compose_weather_exercise.usecases.navigation.ui.AppBarComposable
 import com.nlpit.compose_weather_exercise.usecases.navigation.ui.DrawerComposable
 import com.nlpit.compose_weather_exercise.usecases.navigation.ui.ScreenSwitchComposable
-import com.nlpit.compose_weather_exercise.usecases.navigation.ui.TabBar
 
 @Composable
 fun GlobalComposable(state: MutableState<GlobalState>) {
-    ComposeweatherexerciseTheme {
-        WeatherContent(state.value)
-    }
+        ComposeweatherexerciseTheme {
+            WeatherContent(state.value)
+        }
+
 }
 
 
@@ -36,7 +35,7 @@ private fun WeatherContent(
             )
         },
         topBar = {
-            TabBar(
+            AppBarComposable(
                 openDrawer = { drawerState.open() },
                 modifier = modifier,
                 screenState = state.screenState

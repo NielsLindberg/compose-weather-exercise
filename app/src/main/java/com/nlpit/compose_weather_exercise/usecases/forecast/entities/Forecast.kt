@@ -18,7 +18,10 @@ data class ForecastDaily(
         val weatherImage: String,
         val weatherSubType: String,
         val observations: List<ForecastObservation>
-)
+) {
+        val weatherImageUrl get() = "https://openweathermap.org/img/wn/$weatherImage@2x.png"
+
+}
 
 data class ForecastObservation(
         val date: Date,
@@ -26,5 +29,7 @@ data class ForecastObservation(
         val weatherImage: String,
         val weatherType: String,
         val weatherSubType: String
-)
+) {
+        val weatherImageUrl get() = "https://openweathermap.org/img/wn/$weatherImage@2x.png"
+}
 

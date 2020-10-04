@@ -5,6 +5,7 @@ import com.nlpit.compose_weather_exercise.usecases.navigation.actions.NavigateAc
 import com.nlpit.compose_weather_exercise.usecases.places.actions.FetchLocationsAction
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 

@@ -5,7 +5,7 @@ import com.nlpit.compose_weather_exercise.framework.redux.middlewares.async.Asyn
 import com.nlpit.compose_weather_exercise.usecases.DI
 import com.nlpit.compose_weather_exercise.usecases.error_handling.actions.ErrorActions
 import com.nlpit.compose_weather_exercise.usecases.places.entities.Place
-import com.nlpit.compose_weather_exercise.usecases.places.utils.asPlaces
+import com.nlpit.compose_weather_exercise.usecases.places.entities.asPlaces
 import com.nlpit.networking.api.mapping.places.SimplePlaceGroup
 import retrofit2.Call
 import retrofit2.Callback

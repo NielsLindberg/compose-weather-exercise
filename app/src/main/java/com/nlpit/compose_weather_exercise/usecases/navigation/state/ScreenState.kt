@@ -8,5 +8,5 @@ import com.nlpit.compose_weather_exercise.usecases.navigation.entities.Screen
 @Immutable
 data class ScreenState(
     val currentScreen: Screen = Screen.Home,
-    val screens: List<Screen> = listOf(Screen.Home, Screen.Places, Screen.Yo)
+    val drawer: List<Screen> = listOf(Screen.Home, Screen.Places)
 )

@@ -4,6 +4,7 @@ import androidx.compose.foundation.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.nlpit.compose_weather_exercise.usecases.GlobalState
+import com.nlpit.compose_weather_exercise.usecases.forecast.ui.ForecastScreenComposable
 import com.nlpit.compose_weather_exercise.usecases.navigation.entities.Screen
 import com.nlpit.compose_weather_exercise.usecases.places.ui.PlacesScreenComposable
 
@@ -15,6 +16,6 @@ fun ScreenSwitchComposable(
     when (state.screenState.currentScreen) {
         Screen.Home -> Text("Home")
         Screen.Places -> PlacesScreenComposable(modifier = modifier, state = state.placesState)
-        Screen.Yo -> Text("Yo")
+        is Screen.Forecast -> ForecastScreenComposable(modifier = modifier, state = state.forecastState)
     }
 }

@@ -9,7 +9,7 @@ import com.nlpit.compose_weather_exercise.usecases.navigation.state.ScreenState
 val NavigationReducer: Reducer<ScreenState> = { old, action ->
     when (action) {
         is NavigateActions.HomeScreen -> old.copy(currentScreen = Screen.Home)
-        is NavigateActions.YoScreen -> old.copy(currentScreen = Screen.Yo)
+        is NavigateActions.ForecastScreen -> old.copy(currentScreen = Screen.Forecast(action.place))
         is NavigateActions.PlacesScreen -> old.copy(currentScreen = Screen.Places)
         else -> old
     }

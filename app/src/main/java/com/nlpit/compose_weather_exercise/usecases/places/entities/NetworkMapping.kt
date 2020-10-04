@@ -1,6 +1,5 @@
-package com.nlpit.compose_weather_exercise.usecases.places.utils
+package com.nlpit.compose_weather_exercise.usecases.places.entities
 
-import com.nlpit.compose_weather_exercise.usecases.places.entities.Place
 import com.nlpit.compose_weather_exercise.usecases.forecast.entities.Temperature
 import com.nlpit.compose_weather_exercise.usecases.forecast.entities.TemperatureUnit
 import com.nlpit.compose_weather_exercise.utils.ui.getCountryNameFromCountryCode
