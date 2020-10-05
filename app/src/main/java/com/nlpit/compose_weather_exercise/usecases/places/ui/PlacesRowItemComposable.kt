@@ -20,29 +20,25 @@ import com.nlpit.compose_weather_exercise.utils.ui.toColor
 @Composable
 fun PlacesRowItemComposable(modifier: Modifier = Modifier, place: Place) {
         Row(
-            modifier = modifier.fillMaxWidth().preferredHeight(75.dp).clickable(onClick = {
+            modifier = modifier.fillMaxWidth().clickable(onClick = {
                 DI.dispatch(action = FetchForecastAction(place.woeId))
                 DI.dispatch(action = NavigateActions.ForecastScreen(place))
             }),
             horizontalArrangement = Arrangement.Start
         ) {
             Box(
-                modifier = modifier.fillMaxHeight().preferredWidth(75.dp),
-                shape = MaterialTheme.shapes.small,
+                modifier = modifier.fillMaxHeight(),
                 backgroundColor = place.temperature.toColor(),
-                gravity = Alignment.Center,
             ) {
                 Text(
                     modifier = modifier,
-                    style = MaterialTheme.typography.h5,
-                    text = place.temperature.toString(),
-                    textAlign = TextAlign.Center,
+                    text = place.temperature.toString()
                 )
             }
-            Spacer(modifier = modifier.preferredWidth(8.dp))
-            Column(modifier = modifier.fillMaxHeight(), verticalArrangement = Arrangement.SpaceAround) {
-                Text(modifier = modifier, style = MaterialTheme.typography.h4, text = place.city)
-                Text(modifier = modifier, style = MaterialTheme.typography.h6, text = place.country)
+            Spacer(modifier = modifier)
+            Column(modifier = modifier.fillMaxHeight()) {
+                Text(modifier = modifier, text = place.city)
+                Text(modifier = modifier, text = place.country)
             }
         }
 }

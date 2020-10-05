@@ -38,19 +38,18 @@ fun ForecastWeeklyOverviewItemComposable(modifier: Modifier = Modifier, forecast
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Column(modifier = modifier.preferredWidth(110.dp), verticalArrangement = Arrangement.SpaceBetween) {
-            Text(modifier = modifier, text = forecastDaily.date.dayOfWeek(), style = MaterialTheme.typography.h6)
-            Text(modifier = modifier, text = forecastDaily.date.longDate(), style = MaterialTheme.typography.subtitle1)
+        Column(modifier = modifier) {
+            Text(modifier = modifier, text = forecastDaily.date.dayOfWeek())
+            Text(modifier = modifier, text = forecastDaily.date.longDate())
         }
-        CoilImage(data =  forecastDaily.weatherImageUrl, modifier = modifier.size(75.dp))
-        Column(modifier = modifier.preferredWidth(130.dp), verticalArrangement = Arrangement.SpaceBetween) {
-            Text(modifier = modifier, text = forecastDaily.weatherType, style = MaterialTheme.typography.h6)
-            Text(modifier = modifier, text = forecastDaily.weatherSubType, style = MaterialTheme.typography.subtitle1)
+        CoilImage(data =  forecastDaily.weatherImageUrl, modifier = modifier)
+        Column(modifier = modifier) {
+            Text(modifier = modifier, text = forecastDaily.weatherType)
+            Text(modifier = modifier, text = forecastDaily.weatherSubType)
         }
-        Column(modifier = modifier.preferredWidth(50.dp), verticalArrangement = Arrangement.SpaceBetween, horizontalAlignment = Alignment.End) {
-            Text(modifier = modifier, text = forecastDaily.maxTemperature.toString(), style = MaterialTheme.typography.h6)
-            Text(modifier = modifier, text = forecastDaily.minTemperature.toString(), style = MaterialTheme.typography.h6,
-                color = MaterialTheme.typography.h6.color.copy(alpha = 0.5f))
+        Column(modifier = modifier) {
+            Text(modifier = modifier, text = forecastDaily.maxTemperature.toString())
+            Text(modifier = modifier, text = forecastDaily.minTemperature.toString())
         }
     }
 }

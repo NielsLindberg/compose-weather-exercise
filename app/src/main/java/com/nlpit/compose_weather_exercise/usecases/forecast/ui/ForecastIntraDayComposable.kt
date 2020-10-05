@@ -19,15 +19,15 @@ fun ForecastIntraDayComposable(
     forecastDaily: ForecastDaily
     ) {
     Column(modifier.fillMaxWidth()) {
-        Row(modifier = modifier.fillMaxWidth(),horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.Bottom) {
-            Text(modifier = modifier, style = MaterialTheme.typography.h3, text = forecastDaily.date.dayOfWeek())
+        Row(modifier = modifier.fillMaxWidth()) {
+            Text(modifier = modifier, text = forecastDaily.date.dayOfWeek())
         }
-        ScrollableRow(modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Start) {
+        ScrollableRow(modifier = modifier.fillMaxWidth()) {
             forecastDaily.observations.forEach {
-                Column(modifier = modifier.fillMaxHeight(), verticalArrangement = Arrangement.SpaceBetween, horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(modifier = modifier, text = it.temperature.toString(), style = MaterialTheme.typography.subtitle1)
+                Column(modifier = modifier.fillMaxHeight()) {
+                    Text(modifier = modifier, text = it.temperature.toString())
                     CoilImage(data =  it.weatherImageUrl, modifier = modifier.size(50.dp))
-                    Text(modifier = modifier, text = it.date.hourMinute(), style = MaterialTheme.typography.subtitle2)
+                    Text(modifier = modifier, text = it.date.hourMinute())
                 }
             }
         }
