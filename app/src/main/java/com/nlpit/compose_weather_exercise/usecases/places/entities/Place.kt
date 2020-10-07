@@ -8,5 +8,7 @@ data class Place(
     val country: String,
     val temperature: Temperature,
     val weatherCode: Int,
-    val icon: String?
-)
+    val icon: String? = ""
+) {
+    val weatherImageUrl get() = "https://openweathermap.org/img/wn/$icon@2x.png"
+}
