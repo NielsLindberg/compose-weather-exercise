@@ -16,14 +16,20 @@ fun SimplePlace.asPlace(): Place? {
     val city = name ?: return null
     val country = getCountryNameFromCountryCode(details?.countryCode) ?: return null
     val temperature = parameters?.temperature?.toInt() ?: return null
-    val icon = weathers?.firstOrNull()?.icon
+    val weather = weathers?.firstOrNull()
+    val icon = weather?.icon
+
+
     return Place(
         woeId = woeId,
         city = city,
         country = country,
         temperature = Temperature(
             value = temperature,
-            unit = TemperatureUnit.Celsius),
+            unit = TemperatureUnit.Celsius
+        ),
         weatherCode = weatherCode,
-        icon = icon)
+        icon = weather?.icon,
+        name = weather?.name,
+        description = weather?.description)
 }
