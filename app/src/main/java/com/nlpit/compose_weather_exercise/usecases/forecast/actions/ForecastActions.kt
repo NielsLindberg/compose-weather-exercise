@@ -15,7 +15,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class FetchForecastUnsuccessful(errorMessage: String) : ErrorActions(errorMessage)
+class FetchForecastUnsuccessful(val errorMessage: String) : ErrorActions(errorMessage)
 class FetchForecastSuccessful(val forecast: Forecast) : Action(forecast)
 class SelectDailyForecast(val forecastDaily: ForecastDaily) : Action(forecastDaily)
 

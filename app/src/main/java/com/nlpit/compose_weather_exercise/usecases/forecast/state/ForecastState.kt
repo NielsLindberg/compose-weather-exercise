@@ -5,5 +5,6 @@ import com.nlpit.compose_weather_exercise.usecases.forecast.entities.Forecast
 
 @Immutable
 data class ForecastState(
-    val forecast: Forecast? = null
+    val forecast: Forecast? = null,
+    val errorMessage: String? = null
 )

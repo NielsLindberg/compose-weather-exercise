@@ -11,7 +11,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class FetchLocationsUnsuccessful(errorMessage: String) : ErrorActions(errorMessage)
+class FetchLocationsUnsuccessful(val errorMessage: String) : ErrorActions(errorMessage)
 class FetchLocationsSuccessful(val places: List<Place>) : Action(places)
 
 class FetchLocationsAction : AsyncAction(
